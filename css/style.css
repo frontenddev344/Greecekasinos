@@ -1,0 +1,719 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #171627;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f58f00;
+}
+
+::selection {
+  background-color: #b7256e;
+  color: #fff;
+}
+
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.page-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 20px 0;
+  z-index: 1;
+  background-color: transparent;
+  z-index: 999;
+  width: 100%;
+}
+
+a.site-logo img {
+  max-width: 70%;
+}
+
+.page-header.is-sticky {
+  position: fixed;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
+  padding: 14px 0;
+  backdrop-filter: blur(10px);
+  animation: slideDown 0.35s ease-out;
+  background-color: #171627;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.navbar-area {
+  padding: 4px 0;
+}
+
+.site-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.site-navbar ul li {
+  padding: 0 20px;
+}
+
+.site-navbar ul li a {
+  color: #fff;
+  padding: 10px 0px;
+  display: block;
+  text-decoration: none;
+  font-weight: 400;
+  transition: all 0.2s ease-out 0s;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  transition: all 0.3s;
+  background-color: transparent;
+}
+
+.site-navbar ul li a:hover {
+  color: #ffc827;
+}
+
+.site-navbar ul li a.active {
+  color: #f58f00;
+}
+
+.nav-toggler {
+  border: 3px solid transparent;
+  padding: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  height: 39px;
+  display: none;
+}
+
+.nav-toggler span {
+  width: 28px;
+  height: 3px;
+  background-color: #ffc827;
+  display: block;
+  transition: 0.3s;
+}
+
+.nav-toggler span:before {
+  width: 28px;
+  height: 3px;
+  background-color: #ffc827;
+  display: block;
+  transition: 0.3s;
+  content: "";
+  transform: translateY(-9px);
+}
+
+.nav-toggler span:after {
+  width: 28px;
+  height: 3px;
+  background-color: #ffc827;
+  display: block;
+  transition: 0.3s;
+  content: "";
+  transform: translateY(6px);
+}
+
+.nav-toggler.toggler-open span {
+  background-color: transparent;
+}
+
+.nav-toggler.toggler-open span:before {
+  transform: translateY(0px) rotate(45deg);
+}
+
+.nav-toggler.toggler-open span:after {
+  transform: translateY(-3px) rotate(-45deg);
+}
+
+/* Banner section css start from here */
+.hero-section {
+  background: url(../images/banner-bg.jpg)no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 130px 0;
+  height: 800px;
+  object-fit: cover;
+}
+
+section.hero-section .hero-inner .hero-text h1 {
+  font-size: 56px;
+  font-weight: 700;
+  margin-top: -7px;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+}
+
+section.hero-section .hero-inner .hero-text p span {
+  color: #ffc827;
+}
+
+section.hero-section .hero-inner .row {
+  align-items: center;
+}
+
+section.hero-section .hero-inner .hero-text p {
+  font-size: 16px;
+  line-height: 30px;
+  margin-bottom: 0;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  max-width: 525px;
+  width: 100%;
+
+}
+
+.hero-btn {
+  margin-top: 1.5rem;
+}
+
+.hero-btn a {
+  padding: 10px 22px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: transparent;
+  display: inline-block;
+  border: 1px solid #ffc827;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+  z-index: 1;
+  text-align: center;
+  animation-name: broshure-animation;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  transition: all 0.5s ease-in-out;
+}
+
+.hero-btn a::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: #ffc827;
+  transition: all 0.6s;
+  z-index: -1;
+
+}
+
+.hero-btn a::after {
+
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+
+}
+
+.hero-btn a:hover::before {
+  bottom: 0;
+  left: 0;
+}
+
+.ludo-shape-2 {
+  position: absolute;
+  top: 215px;
+  right: 80px;
+  animation: 20s linear 0s infinite normal none running rotate;
+}
+
+.ludo-shape-2 img {
+  width: 200px;
+  object-fit: cover;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hero-bannr {
+  overflow: hidden;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  /* make things invisible upon start */
+  animation: fadeIn ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1.4s;
+}
+
+/* .fade-in.delayed {
+  animation-delay: 1.4s;
+} */
+
+.hero-bannr img {
+  animation-name: broshure-animation;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  transition: all 0.5s ease-in-out;
+}
+
+@keyframes broshure-animation {
+  0% {
+    transform: translateY(0px);
+    border-radius: 2px;
+  }
+
+  50% {
+    transform: translateY(6px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/*  */
+section.our-top-picks {
+  padding: 60px 0;
+}
+
+section.our-top-picks .section-title h2 {
+  font-size: 40px;
+  line-height: 57px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  position: relative;
+}
+
+.hotels-item {
+  border: 1px solid #0000001f;
+  height: 100%;
+}
+
+section.our-top-picks .section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100px;
+  height: 5px;
+  background: #ffc827;
+  bottom: 0px;
+  left: 0;
+}
+
+.hote-wrapper {
+  padding-top: 50px;
+}
+
+.hotel-details {
+  text-align: center;
+  padding: 20px;
+}
+
+.hotel-details h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.stars ul li {
+  display: inline-block;
+}
+
+.stars {
+  text-align: center;
+}
+
+.stars ul li i {
+  padding: 0 2px;
+  color: #f58f00;
+}
+
+.hero-btn.hotel-btn a {
+  color: #171627;
+}
+
+.hero-btn.hotel-btn a:hover {
+  color: #fff;
+}
+
+.hote-img {
+  overflow: hidden;
+}
+
+.hote-img img {
+  height: 275px;
+  object-fit: cover;
+  transition: all 0.6s;
+}
+
+.hote-img img:hover {
+  transform: scale(1.2);
+}
+
+section.greek-casinos {
+  padding: 0px 0 60px;
+}
+
+.greek-casinos-wrapper p {
+  line-height: 30px;
+  font-size: 16px;
+  color: #000;
+}
+
+.casiono-round-img {
+  overflow: hidden;
+  text-align: center;
+}
+
+.casiono-round-img img {
+  max-width: 50%;
+  filter: brightness(0) invert(1);
+
+}
+
+.shapeanimation {
+  -webkit-animation-duration: infinite;
+  animation-duration: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+@-moz-keyframes shapeMover {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes shapeMover {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes shapeMover {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+.hote-wrapper .row .col-lg-4.col-md-6:nth-child(4),
+.hote-wrapper .row .col-lg-4.col-md-6:nth-child(5),
+.hote-wrapper .row .col-lg-4.col-md-6:nth-child(6) {
+  margin-top: 40px;
+}
+
+
+
+.disclemer h3 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.disclemer p {
+  font-size: 16px;
+  color: #fff;
+  line-height: 30px;
+}
+
+.round-casino .row {
+  align-items: center;
+}
+
+.round-casino {
+  position: relative;
+}
+
+.round-casino {
+  background: url(../images/banner-bg.jpg)no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 40px 0;
+}
+
+/*  */
+footer.footer {
+  background-color: #131222;
+  margin-top: 80px;
+  padding: 80px 0;
+}
+
+.footer-head h4 {
+  font-size: 30px;
+  margin-top: -15px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.footer-content-area p {
+  color: #fff;
+  line-height: 30px;
+  font-size: 16px;
+  max-width: 327px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.menu-contecnt h4,
+.follow-head-footer h4 {
+  font-size: 22px;
+  margin-top: -3px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.menu-contecnt ul li a {
+  color: #fff;
+  padding: 6px;
+  display: block;
+  transition: all 0.3s;
+}
+
+.menu-contecnt ul li a:hover {
+  color: #f58f00;
+}
+
+.follow-head-footer ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.follow-head-footer ul li {
+  margin-right: 10px;
+  width: 35px;
+  height: 35px;
+  line-height: 33px;
+  border: 1px solid #ffc827;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-radius: 2;
+}
+
+.follow-head-footer ul li a {
+  color: #fff;
+}
+
+.follow-head-footer ul li:hover {
+  background-color: #f58f00;
+}
+
+.footer-border-bg {
+  background-color: #171627;
+}
+
+.footer-border-bg p {
+  margin: 0;
+  padding: 30px 0px;
+  text-align: center;
+  color: #fff;
+}
+
+.footer-border-bg p a {
+  color: #fff;
+  font-weight: 700;
+}
+
+/*  */
+
+section.terms {
+  background: url(../images/terms.jpg);
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+section.terms .bnr-text h2 {
+  color: #fff;
+  text-align: center;
+}
+
+section.terms-content-wrapper {
+  padding: 60px 0 0 0;
+}
+
+section.terms-content-wrapper .terms-content h5 {
+  font-size: 26px;
+  font-weight: 100;
+  padding-bottom: 20px;
+}
+
+section.terms-content-wrapper .terms-content p {
+  font-family: 'Montserrat';
+  line-height: 28px;
+  margin-bottom: 0;
+  padding-bottom: 20px;
+}
+
+section.terms-content-wrapper .terms-content ul li {
+  position: relative;
+  padding-left: 20px;
+  padding-bottom: 15px;
+  font-family: 'Montserrat';
+}
+
+section.terms-content-wrapper .terms-content ul li::before {
+  position: absolute;
+  content: "";
+  background: #131222;
+  width: 8px;
+  height: 8px;
+  top: 8px;
+  left: 0;
+  border-radius: 50%;
+}
+
+section.about-page {
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  background: url(../images/about.jpg);
+}
+
+.about-content h2 {
+  color: #fff;
+  text-align: center;
+}
+
+section.about-page-para {
+  padding-top: 60px;
+}
+
+section.about-page-para .about-para p {
+  font-size: 16px;
+  color: #000;
+  line-height: 30px;
+}
+
+section.contact-wrapepr {
+  margin-top: 60px;
+}
+
+section.contact-wrapepr .form-wrapper {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background: #fff;
+  padding: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+section.contact-wrapepr .form-wrapper .form_div {
+  display: flex;
+}
+
+section.contact-wrapepr .form-wrapper .form_div input {
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 28px;
+  margin-right: 14px;
+}
+
+section.contact-wrapepr .form-wrapper textarea#w3review {
+  width: 100%;
+  padding: 16px;
+  margin-right: 14px;
+}
+
+section.contact-wrapepr .form-wrapper input#sub {
+  padding: 14px 50px;
+  background-color: #f58f00;
+  color: #fff;
+  border: none;
+  margin-top: 40px;
+  font-family: "Montserrat";
+  font-size: 16px;
+  border: 1px solid #f58f00;
+  transition: all 0.3s ease-in-out;
+  text-transform: capitalize;
+}
+
+section.contact-wrapepr .form-wrapper input#sub:hover {
+  background-color: transparent;
+  color: #f58f00;
+  border: 1px solid #f58f00;
+}

@@ -1,0 +1,108 @@
+@media screen and (max-width: 991px) {
+
+    .nav-toggler {
+        display: block;
+    }
+
+    .site-navbar {
+        min-height: 60px;
+    }
+
+    .site-navbar ul {
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 60px);
+        left: 0;
+        top: 94px;
+        flex-direction: column;
+        align-items: center;
+        background-color: #171627;
+        max-height: 0;
+        overflow: hidden;
+        transition: .3s;
+        z-index: 999;
+    }
+
+    form.p-md-5.border.rounded-3.bg-body-tertiary {
+        padding: 21px;
+    }
+
+    .site-navbar ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .site-navbar ul li a {
+        padding: 25px;
+        color: #fff;
+
+
+    }
+
+    ul.open {
+        max-height: 100vh;
+        overflow: visible;
+    }
+
+    section.hero-section .hero-inner .hero-text h1 {
+        font-size: 40px;
+    }
+
+    section.hero-section .hero-inner .row {
+        flex-direction: column-reverse;
+    }
+
+    .hero-section {
+        height: auto;
+    }
+
+    .hero-text {
+        margin-top: 60px;
+    }
+
+    .hotels-item {
+        height: 100%;
+        margin-bottom: 40px;
+    }
+
+    .section-title {
+        margin-bottom: 60px;
+    }
+
+    .hote-wrapper {
+        padding-top: 0px;
+    }
+
+    .hote-wrapper .row .col-lg-4.col-md-6:nth-child(3) {
+        margin-top: 40px;
+    }
+
+    .disclemer {
+        padding-top: 50px;
+    }
+
+    .casiono-round-img img {
+        max-width: 100%;
+
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .hote-wrapper .row .col-lg-4.col-md-6:nth-child(2) {
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    section.our-top-picks .section-title h2 {
+        font-size: 28px;
+        line-height: 39px;
+
+    }
+
+    section.contact-wrapepr .form-wrapper .form_div {
+        display: flex;
+        flex-direction: column;
+    }
+}
