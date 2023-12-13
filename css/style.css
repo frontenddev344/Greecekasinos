@@ -391,6 +391,7 @@ section.our-top-picks .section-title h2::after {
 
 .stars {
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .stars ul li i {
@@ -741,4 +742,20 @@ section.best-casino::after {
   content: "";
   background-color: rgba(17, 20, 34, 0.6);
   z-index: -1;
+}
+
+ul.text-start.list-unstyled li {
+  position: relative;
+  padding-left: 24px;
+  padding-bottom: 15px;
+}
+
+ul.text-start.list-unstyled li::before {
+  position: absolute;
+  content: "\f058";
+  left: 0;
+  border-radius: 50%;
+  font-family: fontAwesome;
+  color: #f58f00;
+  font-size: 16px;
 }
