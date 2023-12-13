@@ -759,3 +759,8 @@ ul.text-start.list-unstyled li::before {
   color: #f58f00;
   font-size: 16px;
 }
+
+section.contact-wrapepr h2 {
+  text-align: center;
+  margin: 30px;
+}
